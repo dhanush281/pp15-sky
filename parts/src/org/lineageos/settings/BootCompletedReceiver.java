@@ -19,11 +19,8 @@ package org.lineageos.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.IBinder;
-import android.view.Display.HdrCapabilities;
-import android.view.SurfaceControl;
-
+import android.util.Log;
+import org.lineageos.settings.display.LcdFeaturesService;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -36,6 +33,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Thermal Profiles
         ThermalUtils.startService(context);
-
+		context.startService(new Intent(context, LcdFeaturesService.class));
     }
 }
