@@ -87,6 +87,12 @@
          on the headphone/microphone jack. When false use the older uevent framework -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
+    <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
+    <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
+
     <!-- dual sap mode is supported on this device. -->
     <bool name="config_wifi_dual_sap_mode_enabled">false</bool>
 
@@ -145,8 +151,5 @@
         <item>100</item>
         <item>50</item>
     </integer-array>
-
-    <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
-    <bool name="config_dozePulsePickup">true</bool>
 
 </resources>
