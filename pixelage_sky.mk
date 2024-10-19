@@ -7,24 +7,13 @@
 DEVICE_PATH := device/xiaomi/sky
 
 # Configure core_64_bit.mk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common Infinity-X configurations
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
-
-WITH_GAPPS := true
-INFINITY_BUILD_TYPE := OFFICIAL
-TARGET_BOOTANIMATION := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_BUILD_APERTURE_CAMERA := true
-INFINITY_MAINTAINER := "SuvojeetSengupta"
-TARGET_BUILD_VIMUSIC := true
-TARGET_BUILD_GOOGLE_TELEPHONY := false
-USE_MOTO_CALCULATOR := true
+# Inherit common Bliss configurations
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -34,10 +23,28 @@ $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := infinity_sky
+PRODUCT_NAME := pixelage_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
 
+PRODUCT_SYSTEM_NAME := sky_p_in
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# flags
+
+#UDFPS
+EXTRA_UDFPS_ANIMATIONS := false
+
+#Misc.
+TARGET_SUPPORTS_TOUCHGESTURES := false
+
+TARGET_SUPPORTS_BLUR := false
+
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := true

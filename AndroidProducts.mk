@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_sky.mk
+    $(LOCAL_DIR)/pixelage_sky.mk
+
+COMMON_LUNCH_CHOICES := \
+    pixelage_sky-ap3a-eng \
+    pixelage_sky-ap3a-userdebug \
+    pixelage_sky-ap3a-user
