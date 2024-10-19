@@ -53,14 +53,22 @@
          from the HAL in the future. -->
     <array name="config_sfps_sensor_props">
         <item>@array/config_sfps_sensor_props_0</item>
+    <item>@array/config_sfps_sensor_props_1</item>
     </array>
 
     <array name="config_sfps_sensor_props_0">
-        <item></item>     <!-- displayId -->
+        <item>local:4630946904973289089</item>     <!-- displayId -->
         <item>1080</item> <!-- sensorLocationX -->
         <item>1000</item>  <!-- sensorLocationY -->
         <item>110</item>  <!-- sensorRadius -->
     </array>
+
+  <array name="config_sfps_sensor_props_1">
+        <item>local:4630946796165144705</item>     <!-- displayId -->
+        <item>1080</item> <!-- sensorLocationX -->
+        <item>1000</item>  <!-- sensorLocationY -->
+        <item>110</item>  <!-- sensorRadius -->
+    </array>         
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">1000px</dimen>
