@@ -240,10 +240,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor:64
 
-# Google Camera Go
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor:64 \
