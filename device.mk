@@ -662,3 +662,7 @@ $(call inherit-product, vendor/xiaomi/sky-gcam/Camera-vendor.mk)
 
 # signed
 -include vendor/lineage-priv/keys/keys.mk
+
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
