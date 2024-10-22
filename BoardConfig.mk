@@ -282,11 +282,3 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# Sepolicy - XiaomiParts
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
-# SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
